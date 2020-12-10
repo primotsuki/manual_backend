@@ -32,12 +32,32 @@ class UserSeeder extends Seeder
             'password' => bcrypt('admin'),
         ]);        
         //$user_admin->attachRole($role_admin);
+        $user_usuario = \App\Models\User::create([
+            'name' => 'coordinador',
+            'email' => 'coordina@coordina.com',
+            'password' => bcrypt('coordina'),
+        ]);  
 
         $user_usuario = \App\Models\User::create([
-            'name' => 'usuario',
-            'email' => 'usuario@usuario.com',
-            'password' => bcrypt('usuario'),
+            'name' => 'publicador',
+            'email' => 'publicador@publicador.com',
+            'password' => bcrypt('publicador'),
         ]);        
-        //$user_usuario->attachRole($role_usuario);
+        //$user_usuario->attachRole($role_usuario)
+        $user_usuario = \App\Models\User::create([
+            'name' => 'docente',
+            'email' => 'docente@docente.com',
+            'password' => bcrypt('docente'),
+        ]);
+        $user_usuario = \App\Models\User::create([
+            'name' => 'kardex',
+            'email' => 'kardex@kardex.com',
+            'password' => bcrypt('docente'),
+        ]);  
+        //admin
+        //publicador
+        //coordinador
+        //docente
+        //kardex
     }
 }
